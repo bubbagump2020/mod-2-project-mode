@@ -3,4 +3,3 @@ Rails.application.routes.draw do
   resources(:insults)
   resources(:users)
   resources(:names)
-end
