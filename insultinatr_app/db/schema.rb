@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 5) do
+
+  create_table "insults", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "insult"
+    t.index ["user_id"], name: "index_insults_on_user_id"
+  end
 
   create_table "name_parts", force: :cascade do |t|
     t.string "names"
+  end
+
+  create_table "names", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.index ["user_id"], name: "index_names_on_user_id"
   end
 
   create_table "swears", force: :cascade do |t|
