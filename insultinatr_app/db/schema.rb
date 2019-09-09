@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "names"
   end
 
-  create_table "swearwords", force: :cascade do |t|
+  create_table "swears", force: :cascade do |t|
     t.string "word"
   end
 
