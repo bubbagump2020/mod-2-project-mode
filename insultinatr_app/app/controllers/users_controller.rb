@@ -12,10 +12,11 @@ class UsersController < ActionController::Base
             username: params[:username],
 
         })
-        redirect_to("/users/:id")
+        redirect_to("/users/#{@user.id}")
     end
 
     def show
         @user = User.find_by({ id:params[:id]})
+        @insults = Insult.all
     end
 end
