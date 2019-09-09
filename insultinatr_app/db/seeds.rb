@@ -25,6 +25,54 @@ swear_words = %w[
     bullshit
     buttpirate
     buttfucker
+    chesticle
+    chode
+    clusterfuck
+    cockburger
+    cockhead
+    cockjockey
+    cocknoker
+    cockmongler
+    cockwaffle
+    dick
+    dickbag
+    dickbeaters
+    dickface
+    dickwad
+    dickweasel
+    dickweed
+    dipshit
+    douchewaffle
+    dumbass
+    dumbfuck
+    dumbshit
+    fuckhead
+    fuckface
+    fucknut
+    fuckstick
+    fuctard
+    fuckup
+    fuckwad
+    fuckwit
+    jackass
+    lameass
+    pecker
+    peckerhead
+    penis
+    penishead
+    polesmoker
+    prick
+    schlong
+    shit
+    shitbag
+    shit-for-brains
+    shithead
+    shithole
+    shitstain
+    skank
+    slut
+    twat
+    twatwaffle
 ]
 
 swear_words.each do |word|
