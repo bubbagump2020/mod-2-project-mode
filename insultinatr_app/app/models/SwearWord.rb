@@ -1,2 +1,0 @@
-class SwearWord < ApplicationRecord
-end
