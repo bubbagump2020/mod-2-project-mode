@@ -4,18 +4,21 @@ class UsersController < ActionController::Base
         @users = User.all 
     end
 
-    def new
-    end
-
-    def create
-        User.create({
-            username: params[:username],
-
-        })
-        redirect_to("/users/:id")
-    end
-
     def show
         @user = User.find_by({ id:params[:id]})
     end
+
+    def new
+        @user = User.new
+    end
+
+    def create
+        User.create(user_params)
+        redirect_to("/users/:id")
+    end
+
+    def user_params
+        params[:user]
+    end
+
 end

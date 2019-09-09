@@ -67,34 +67,20 @@ span.psw {
 </style>
 </head>
 <body>
-
-<h2>Login Form</h2>
-
-<form action="/users/<%  %>">
-  <div class="imgcontainer">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUgG3o6e75uadcdwzpwJ3VAXXPiKZdWnN8gBavwd5j1smegtNzIQ" alt="Avatar" class="avatar">
-  </div>
-
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="user[username]" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="user[password]" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  
-  <a class="button" href="/users/new">New User</a>
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
-
+    <h1>Login</h1>
+    <%= form_with method: 'POST', url: '/authenticate' do |form|%>
+        <div class="imgcontainer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUgG3o6e75uadcdwzpwJ3VAXXPiKZdWnN8gBavwd5j1smegtNzIQ" alt="Avatar" class="avatar">
+        </div>
+        <div>
+            <%= form.label :username %>
+            <%= form.text_field :username, placeholder: "Enter Username", required: true %>
+        </div>
+        <div>
+            <%= form.label :password %>
+            <%= form.password_field :password, placeholder: "Enter Password", required: true %>
+        </div>
+        <%= form.submit("Login") %>
+    <% end %>
 </body>
 </html>
