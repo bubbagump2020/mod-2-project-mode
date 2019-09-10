@@ -1,8 +1,11 @@
-class UsersController < ActionController::Base
+class UsersController < ApplicationController
     # skip_before_action(:verify_authenticity_token)
 
     def create
-        @user = User.create(user_params)
+        User.create({
+            username:params[:name],
+            password:params[:password]
+        })
         redirect_to "/users/#{@user.id}"
     end
 
