@@ -1,5 +1,9 @@
 class UsersController < ActionController::Base
 
+    # Logic: Index is supposed to show a list of all users
+    # instead I have it find the logged in user and redirect
+    # them to the their own page
+
     def index
         @user = User.find_by(params[:id])
         redirect_to("/users/#{@user.id}")
@@ -16,13 +20,13 @@ class UsersController < ActionController::Base
 
 
     def user_params
-        # byebug
         params.require(:user).permit( :email, :password, :password_confirmation)
     end
 
     def show
         @user = User.find_by({ id: params[:id]})
-        @insults = Insult.all
+        @swears = Swear.all
+        byebug
     end
 
 end
