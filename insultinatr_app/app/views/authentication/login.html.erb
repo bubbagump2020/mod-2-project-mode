@@ -68,13 +68,13 @@ span.psw {
 </head>
 <body>
     <h1>Login</h1>
-    <%= form_with method: 'POST', url: '/authenticate' do |form|%>
+    <%= form_with method: "POST", url: "/authenticate" do |form|%>
         <div class="imgcontainer">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUgG3o6e75uadcdwzpwJ3VAXXPiKZdWnN8gBavwd5j1smegtNzIQ" alt="Avatar" class="avatar">
         </div>
         <div>
-            <%= form.label :username %>
-            <%= form.text_field :username, placeholder: "Enter Username", required: true %>
+            <%= form.label :email %>
+            <%= form.text_field :email, placeholder: "Enter Username", required: true %>
         </div>
         <div>
             <%= form.label :password %>
@@ -82,6 +82,6 @@ span.psw {
         </div>
         <%= form.submit("Login") %><br><br>
     <% end %>
-    <a href="/login/new">Create New User</a>
+    <a href="/users/new">Create New User</a>
 </body>
 </html>

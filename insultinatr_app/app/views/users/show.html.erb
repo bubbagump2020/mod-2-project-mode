@@ -9,16 +9,9 @@ body {font-family: 'Gloria Hallelujah', cursive;
 </style>
 </head>
 <body>
-<h2>It's the show page for <%= @user.username %>!</h2>
 
-<p>
-    <% @insults.each do |insult| %>
-        <% if insult.user == @user %>
-            <%= insult %>
-        <% end %> 
-    <% end %>
-</p>
 
 <a class="button" href="/insults/new">Insult me!</a>
+
 </body>
 </html>
