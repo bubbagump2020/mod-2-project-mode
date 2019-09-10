@@ -1,4 +1,3 @@
-
 class NamesController < ApplicationController
   
 end
