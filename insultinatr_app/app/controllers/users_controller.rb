@@ -1,10 +1,7 @@
 class UsersController < ActionController::Base
-    # skip_before_action(:verify_authenticity_token)
-
     # Logic: Index is supposed to show a list of all users
     # instead I have it find the logged in user and redirect
     # them to the their own page
-
     def index
         @user = User.find_by(params[:id])
         redirect_to("/users/#{@user.id}")
@@ -27,7 +24,7 @@ class UsersController < ActionController::Base
     def show
         @user = User.find_by({ id: params[:id]})
         @swears = Swear.all
-        # byebug
+
     end
 
 end
