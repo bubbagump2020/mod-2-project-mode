@@ -1,5 +1,5 @@
 class AuthenticationController < ApplicationController
-    skip_before_action :check_for_authentication
+    # skip_before_action :check_for_authentication
 
     def login
     end
