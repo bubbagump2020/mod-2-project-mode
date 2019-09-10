@@ -2,23 +2,20 @@ class AuthenticationController < ApplicationController
     skip_before_action :check_for_authentication
 
     def login
-
     end
 
     def authenticate
-        user = User.find_by({ username: params[:username]})
-        if user != nil && customer.authenticate(params[:password])
+        user = User.find_by({ email: params[:email]})
+        if user != nil && user.authenticate(params[:password])
             session[:current_user_id] = user.id
-            redirect_to "/users/:id"
+            redirect_to("/users")
         end
     end
 
-    def new
-        @user = User.new
+    def destroy
+        session[:user_id] = nil
+        redirect_to("/login")
     end
 
-    def create
-
-    end
 
 end
