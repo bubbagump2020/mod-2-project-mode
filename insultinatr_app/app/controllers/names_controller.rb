@@ -1,3 +1,4 @@
+
 class NamesController < ApplicationController
-    
+  
 end
