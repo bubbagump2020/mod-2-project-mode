@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get('/login', to: 'authentication#login')
   post('/authenticate', to: 'authentication#authenticate')
+  get('/logout', to: 'authentication#destroy')
 
+  resources(:authenticate, only: :destroy)
   resources(:insults)
   resources(:users)
   resources(:names)
