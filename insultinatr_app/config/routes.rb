@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get('/login', to: 'authentication#login')
   post('/authenticate', to: 'authentication#authenticate')
 
+  get('/login/new', to: 'authentication#new')
+
   resources(:insults)
   resources(:users)
   resources(:names)
+
+end
