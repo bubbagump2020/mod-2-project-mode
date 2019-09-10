@@ -1,4 +1,5 @@
 class UsersController < ActionController::Base
+    # skip_before_action(:verify_authenticity_token)
 
     # Logic: Index is supposed to show a list of all users
     # instead I have it find the logged in user and redirect
