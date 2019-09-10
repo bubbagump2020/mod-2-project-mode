@@ -3,8 +3,13 @@
 <head>
 </head>
 <body>
-    <% @insults.each do |insult| %>
-       <P> <%= insult.insult %></p>
+    <% if @insults.length == 0 %>
+        <h3>Sorry you don't have any insults</h3>
+        <h3><a href="/insults/new">Follow me for insults!</a></h3>
+    <% else %>
+        <% @insults.each do |insult| %>
+            <P> <%= insult.insult %></p>
+        <% end %>
     <% end %>
 </body>
 </html>
