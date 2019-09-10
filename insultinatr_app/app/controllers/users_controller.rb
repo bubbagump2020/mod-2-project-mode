@@ -10,7 +10,7 @@ class UsersController < ActionController::Base
     def create
         User.create({
             username: params[:username],
-
+            password: params[:password]
         })
         redirect_to("/users/#{@user.id}")
     end
