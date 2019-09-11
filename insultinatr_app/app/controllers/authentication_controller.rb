@@ -9,6 +9,9 @@ class AuthenticationController < ApplicationController
         if user != nil && user.authenticate(params[:password])
             session[:current_user_id] = user.id
             redirect_to("/users")
+        else
+            flash.now[:alert] = "Email or password is invalid"
+            redirect_to("/login")
         end
     end
 

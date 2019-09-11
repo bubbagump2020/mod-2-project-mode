@@ -13,7 +13,12 @@ class UsersController < ActionController::Base
 
     def create
         @user = User.create(user_params)
-        redirect_to("/users/#{@user.id}")
+        if (@user.valid?)
+            redirect_to("/users/#{@user.id}")
+        else
+            flash[:user_attributes] = @user.attributes
+            redirect_to '/login'
+        end
     end
 
 
