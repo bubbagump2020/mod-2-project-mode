@@ -6,7 +6,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=email], input[type=password] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -15,7 +15,7 @@ input[type=text], input[type=password] {
   background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=email]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -74,15 +74,20 @@ button:hover {
 </style>
 </head>
 <body>
-    <%= form_with model: @user, class: "New User Form", html: ({ style: "border:1px solid #ccc" }) do |form| %>
+    <%= form_for(@user)  do |form| %>
         <div class="container">
+            <%= render 'shared/error_messages' %>
             <h1>Sign up</h1>
             <p>Please fill in this form to create an account</p>
             <hr>
             <%= form.label :email %>
-            <%= form.text_field :email, placeholder: "Username" %>
+<<<<<<< HEAD
+            <%= form.text_field :email, placeholder: "Email" %>
+=======
+            <%= form.email_field :email, placeholder: "Email" , required: true%>
+>>>>>>> c65024ef45a3932ab874bb0b797f90bfd2363807
         </div>
-        <div>
+        <div class="container">
             <%= form.label :password %>
             <%= form.password_field :password, placeholder: "Password" %>
             <%= form.label :confirm_password%>
