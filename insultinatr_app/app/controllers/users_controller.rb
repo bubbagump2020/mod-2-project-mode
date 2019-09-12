@@ -2,6 +2,10 @@ class UsersController < ActionController::Base
     def show
         @swears = Swear.all
         @user = User.find(params[:id])
+
+    def index
+        @user = User.find_by(params[:id])
+        redirect_to("/users/#{@user.id}")
     end
 
     def new
