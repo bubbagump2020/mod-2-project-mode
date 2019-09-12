@@ -1,7 +1,10 @@
 class InsultsController < ActionController::Base
+    # protect_from_forgery
+
     def create
         @insult = Insult.create
-        redirect_to("/users/#{@user.id}")
+        @user = User.find(id:params[:id])
+        redirect_to users_path
     end
 
     def index

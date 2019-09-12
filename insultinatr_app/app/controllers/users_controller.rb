@@ -22,8 +22,12 @@ class UsersController < ActionController::Base
     end
 
     def show
-        @user = User.find_by({ id: params[:id]})
-        @swears = Swear.all
+        if(@user.valid?)
+            @user = User.find_by({ id: params[:id]})
+            @swears = Swear.all
+        else
+            redirect_to '/users/new'
+        end
         # byebug
     end
 

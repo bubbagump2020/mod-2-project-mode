@@ -4,9 +4,9 @@
 </head>
 <body>
     
-    <form action="/insults" method="post">
+    <%# <form action="/insults" method="post">
         <input type="submit" value="Give me an insult!">
-    </form>
+    </form> %>
 <title>The Insultinatr!</title>
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 <style>
@@ -14,9 +14,9 @@ body {font-family: 'Gloria Hallelujah', cursive;}
 </style>
 <body>
 
-<%= form_with model: @insult do %>
-  <h1>Your new insult!</h1>
-  
+<%= form_with url: "/insults", method: "post", model: @insult do %>
+  <h1>You made it to the new insult page!</h1>
+  <%= submit_tag("Give me an insult!") %>  
 <% end %>
 
 <%# <form method="POST" action="/users" style="border:1px solid #ccc">
