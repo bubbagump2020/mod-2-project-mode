@@ -1,1 +1,15 @@
-<h1>You made it to the show insult page!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Insults!<h1>
+        <% @insults.each do |insult| %>
+            <% if insult.user_id == @user%>
+                <P> <%= insult.insult %></p>
+            <% end %>
+        <% end %>
+    <h3><a href="/users/<%= @user %>">Main Page</a></h3>
+    <h3><a href="/insults/new">Follow me for insults!</a></h3>
+</body>
+</html>

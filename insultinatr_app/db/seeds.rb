@@ -7,6 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Swear.destroy_all
+User.destroy_all
+
+user_1 = User.create({
+    email: "fake@fraud.com",
+    password: "foobar"
+})
+
+user_2 = User.create({
+    email: "fake120@fraud.com",
+    password: "foobar"
+})
 
 swear_words = %w[
     ass

@@ -1,3 +1,0 @@
-class NamePart < ApplicationRecord
-
-end

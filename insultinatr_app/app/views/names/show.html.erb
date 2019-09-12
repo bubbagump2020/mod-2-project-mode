@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Fake Names!<h1>
+        <% @names.each do |name| %>
+            <% if name.user_id == @user %>
+                <P> <%= name.name %></p>
+            <% else %>
+                <h2><%= "Sorry, it appears that you aren't awesome." %></h2>
+            <% end %>
+        <% end %>
+     <h3><a href="/users/<%= @user %>">Main Page</a></h3>
+     <h3><a href="/names/new">Follow me for Fake Names!</h3>
+</body>
+</html>

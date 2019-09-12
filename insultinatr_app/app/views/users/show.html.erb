@@ -9,16 +9,10 @@ body {font-family: 'Gloria Hallelujah', cursive;
 </style>
 </head>
 <body>
+    <h1>Welcome!</h1>
 
-<h3>Insults:</h3>
-<ul>
-<% @user.insults.each do | insult | %>
-    <li><%= insult %></li>
-<% end %>
-</ul> 
-
-
-<a class="button" href="/insults">My Insults!</a>
+<%= link_to "My Insults!", insult_path %>
+<%= link_to "My Fake Names!", name_path %>
 <%= link_to "Log out", logout_path %>
 
 </body>
