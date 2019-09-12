@@ -1,0 +1,166 @@
+body {
+    background-color: lightgray;
+    font-family: 'Gloria Hallelujah', cursive;
+    overflow: auto;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  a {
+    font-family: 'Gloria Hallelujah', cursive;
+    border-radius: 50px 15px;
+    padding: 14px 16px;
+    transition: background-color 0.5s ease;
+  }
+  a:hover {
+    text-decoration: bold;
+    background-color: gray;
+  }
+  * Full-width input fields */
+input[type=email], input[type=password] {
+  width: 75%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  overflow: auto;
+  resize: vertical;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  overflow: auto;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: lightslategray;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: background-color 0.5s ease;
+  font-family: 'Gloria Hallelujah', cursive;
+  border-radius: 50px 15px;
+  text-align: center;
+  display: block;
+  max-width: 300px;
+  margin: auto;
+}
+
+button:hover {
+  opacity:1;
+  cursor: pointer;
+  background-color: darkslategray
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: gray;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  cursor: pointer;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ul {
+    padding: 20px;
+    background: darkslategray;
+    font-family: 'Gloria Hallelujah', cursive;
+    border-radius: 15px 50px 30px 5px;
+    width: 75%;
+    position: relative;
+    left: 30px;
+}
+h2 {
+    position: relative;
+    left: 30px;
+    clear: left;
+}
+ul li {
+    margin: 5px;
+    background: lightslategray;
+    overflow: auto;
+    font-family: 'Gloria Hallelujah', cursive;
+    width: 75%;
+}
+div {
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    border-radius: 50px 15px;
+  }
+  html {
+    font-family: 'Gloria Hallelujah', cursive;
+  }
+  .topnav {
+    overflow: hidden;
+    /* background-color: #333; */
+    float: left;
+    position: relative;
+    left: 12px;
+  }
+  .topnav a {
+      float: left;
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      border-radius: 50px 15px;
+      /* position: relative;
+      left: 50px; */
+  }
