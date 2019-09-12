@@ -11,5 +11,6 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 6 }
     has_many(:insults)
     has_many(:names)
+    has_many(:visits, class_name: "Ahoy::Visit")
 
 end
