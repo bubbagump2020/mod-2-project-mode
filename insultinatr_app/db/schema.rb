@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2019_09_12_201838) do
   create_table "insults", force: :cascade do |t|
     t.integer "user_id"
     t.string "insult"
+    t.bigint "visit_id"
     t.index ["user_id"], name: "index_insults_on_user_id"
   end
 
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_09_12_201838) do
   create_table "names", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
+    t.bigint "visit_id"
     t.index ["user_id"], name: "index_names_on_user_id"
   end
 
@@ -76,6 +78,7 @@ ActiveRecord::Schema.define(version: 2019_09_12_201838) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
+    t.bigint "visit_id"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
