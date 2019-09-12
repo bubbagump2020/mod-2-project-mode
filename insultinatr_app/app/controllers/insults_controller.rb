@@ -1,25 +1,22 @@
 class InsultsController < ActionController::Base
     
-    def index
+    def show
         @insults = Insult.all
-        # byebug
+        @user = session[:id]
     end
 
     def new
-        # byebug
-        @user_id = session[:current_user_id]
+        @user_id = session[:id]
         @insult = Insult.new
     end
 
     def create
-        # byebug
+        user_id = session[:id]
         swear_word = Swear.all.sample
         @insult = Insult.create({
-            user_id: session[:current_user_id],
+            user_id: user_id,
             insult: swear_word.word
         })
-        redirect_to("/insults")
-        # byebug
+        redirect_to("/users/#{user_id}")
     end
-    
 end
