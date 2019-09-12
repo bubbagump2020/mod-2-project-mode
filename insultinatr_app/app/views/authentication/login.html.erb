@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="../../styles/menu.css">
 <title>The Insultinatr!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<%# <style>
+<style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
 
@@ -68,11 +68,11 @@ span.psw {
      width: 100%;
   }
 }
-</style> %>
+</style>
 </head>
 <body>
     <h1>Login</h1>
-    <%= form_for(:session, url: login_path) do |form|%>
+    <%= form_with method: "POST", url: "/authenticate" do |form|%>
         <div class="imgcontainer">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUgG3o6e75uadcdwzpwJ3VAXXPiKZdWnN8gBavwd5j1smegtNzIQ" alt="Avatar" class="avatar">
         </div>
