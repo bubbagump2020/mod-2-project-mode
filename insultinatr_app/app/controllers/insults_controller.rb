@@ -1,19 +1,25 @@
 class InsultsController < ActionController::Base
-    # protect_from_forgery
+    
+    def index
+        @insults = Insult.all
+        # byebug
+    end
+
+    def new
+        # byebug
+        @user_id = session[:current_user_id]
+        @insult = Insult.new
+    end
 
     def create
-        @insult = Insult.create
-        @user = User.find(id:params[:id])
-        redirect_to users_path
+        # byebug
+        swear_word = Swear.all.sample
+        @insult = Insult.create({
+            user_id: session[:current_user_id],
+            insult: swear_word.word
+        })
+        redirect_to("/insults")
+        # byebug
     end
-
-    def index
-        @insults = Insult.all 
-    end
-
-    def show
-        @insult = Insult.find_by({ id:params[:id]})
-    end
-    
     
 end

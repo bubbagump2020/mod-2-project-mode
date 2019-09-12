@@ -1,10 +1,15 @@
 class User < ApplicationRecord
-    # skip_before_action :verify_authenticity_token
-    
+    before_save { self.email = email.downcase }
+    #skip_before_action :verify_authenticity_token
+    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    validates :email, presence: true, length: { maximum: 255 },
+              format: { with: VALID_EMAIL_REGEX },
+              uniqueness: { case_sensitive: false }
+
+
     has_secure_password
+    validates :password, length: { minimum: 6 }
     has_many(:insults)
     has_many(:names)
-    #validates :email, presence: true uniqueness: true
-    validates :password, confirmation: true
-    has_secure_password
+
 end
