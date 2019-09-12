@@ -59,6 +59,10 @@ ActiveRecord::Schema.define(version: 2019_09_12_201838) do
     t.index ["user_id"], name: "index_insults_on_user_id"
   end
 
+  create_table "name_parts", force: :cascade do |t|
+    t.string "names"
+  end
+
   create_table "names", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
