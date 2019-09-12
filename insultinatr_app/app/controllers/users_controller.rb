@@ -22,7 +22,7 @@ class UsersController < ActionController::Base
 
     private
         def user_params
-            params.require(:user).permit( :email, :password, :password_confirmation)
+            params.require(:user).permit( :email, :password, :password_confirmation, :visit_id)
         end
 
 end

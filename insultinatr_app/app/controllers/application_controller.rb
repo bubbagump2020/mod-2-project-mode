@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
     protected
 
     def track_action
-        ahoy.track "Ran action", request.path_parameters
+        ahoy.track "Ran action", request.filtered_parameters
+        
     end
     # before_action(:check_for_authentication)
     # skip_before_action :verify_authenticity_token
