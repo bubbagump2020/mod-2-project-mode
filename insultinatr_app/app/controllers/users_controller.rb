@@ -1,7 +1,8 @@
 class UsersController < ActionController::Base
     def show
         @swears = Swear.all
-        @user = User.find(params[:id])
+        @names = Name.all
+        @user_id = session[:id]
     end
 
     def new
@@ -12,7 +13,7 @@ class UsersController < ActionController::Base
         @user = User.create(user_params)
         if @user.save
             flash[:success] = "Welcome!"
-            redirect_to @user
+            redirect_to @user.id
         else
             render 'new'
         end
