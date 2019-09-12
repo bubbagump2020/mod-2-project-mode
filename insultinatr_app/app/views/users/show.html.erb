@@ -19,14 +19,7 @@ You made it to your user page, dummie!
 
 <h2>Insults:</h2>
 <ul>
-<% if @user.insults.length == 0 %>
-        <h3>Sorry you don't have any insults</h3>
-        <h3><a href="/insults/new">Follow me for insults!</a></h3>
-    <% else %>
-        <% @user.insults.each do | insult | %>
-        <li><%= insult %></li>
-        <% end %>
-<% end %>
+
 </ul> 
     <h1>Welcome!</h1>
 
