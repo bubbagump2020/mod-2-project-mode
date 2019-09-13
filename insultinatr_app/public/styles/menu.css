@@ -26,6 +26,9 @@ body {
     font-family: verdana;
     font-size: 20px;
     font-family: 'Gloria Hallelujah', cursive;
+    position: relative;
+    left: 30px;
+    clear: left;
   }
   a {
     font-family: 'Gloria Hallelujah', cursive;
