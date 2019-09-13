@@ -17,10 +17,23 @@ You made it to your user page, dummie!
 <a href="/logout">Logout</a>
 </div>
 
-<h2>Insults:</h2>
-<ul>
 
+<ul>
+<h2>Insults:</h2>
+    <% @insults.each do |insult| %>
+        <% if insult.user_id == @user_id %>
+            <p><%= insult.insult %>
+        <% end %>
+    <% end %>
+
+<h2>Fake Names:</h2>
+    <% @names.each do |name| %>
+        <% if name.user_id == @user_id %>
+            <p><%= name.name %>
+        <% end %>
+    <% end %>
 </ul> 
+
     <h1>Welcome!</h1>
 
 <%= link_to "My Insults!", insult_path %>

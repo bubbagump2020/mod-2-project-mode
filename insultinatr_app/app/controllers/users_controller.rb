@@ -1,6 +1,6 @@
 class UsersController < ActionController::Base
     def show
-        @swears = Swear.all
+        @insults = Insult.all
         @names = Name.all
         @user_id = session[:id]
     end

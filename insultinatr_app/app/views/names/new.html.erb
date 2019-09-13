@@ -10,7 +10,7 @@
 body {font-family: 'Gloria Hallelujah', cursive;}
 </style>
 <body>
-  <%= form_with method: "POST", url: "/names" do |name|%>
+  <%= form_for(@name) do |name|%>
     <button class="namebtn" >Give me a Name!</button>
   <% end %>
 </body>
