@@ -113,27 +113,46 @@ button:hover {
   clear: both;
   display: table;
 }
+
 ul {
-    padding: 20px;
+    padding: 0;
     background: darkslategray;
     font-family: 'Gloria Hallelujah', cursive;
-    border-radius: 15px 50px 30px 5px;
-    width: 75%;
-    position: relative;
-    left: 30px;
+    /* border-radius: 15px 50px 30px 5px; */
+    width: 100%;
+    position: fixed;
+    /* left: 30px; */
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    bottom: 0;
 }
-h2 {
-    position: relative;
-    left: 30px;
-    clear: left;
+li {
+    /* float: left; */
+    display: inline;
+}
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 ul li {
+    display:inline;
     margin: 5px;
     background: lightslategray;
     overflow: auto;
     font-family: 'Gloria Hallelujah', cursive;
     width: 75%;
 }
+
+
+h2 {
+    position: relative;
+    left: 30px;
+    clear: left;
+}
+
 
 .header, .footer {
     background-color: grey;
@@ -146,22 +165,7 @@ ul li {
   html {
     font-family: 'Gloria Hallelujah', cursive;
   }
-  .topnav {
-    overflow: hidden;
-    /* background-color: #333; */
-    float: left;
-    position: relative;
-    left: 12px;
-  }
-  .topnav a {
-      float: left;
-      display: block;
-      text-align: center;
-      padding: 14px 16px;
-      border-radius: 50px 15px;
-      /* position: relative;
-      left: 50px; */
-  }
+  
   label {
     width: 50%;
     resize: vertical;
@@ -237,3 +241,25 @@ img {
     margin-left: auto;
     margin-right: auto;
     }
+.navbar {
+    overflow: hidden;
+    background: darkslategray;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: none;
+    }
+      
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: none;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 0px;
+    margin: none;
+    }
+
+    
