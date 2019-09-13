@@ -3,6 +3,8 @@ class UsersController < ActionController::Base
         @insults = Insult.all
         @names = Name.all
         @user_id = session[:id]
+        @user = User.find_by({id:params[:id]})
+        @users = User.all 
     end
 
     def new
