@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <div class="header">
     <h1>Login</h1>
+  </div>
+  <div>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUgG3o6e75uadcdwzpwJ3VAXXPiKZdWnN8gBavwd5j1smegtNzIQ" alt="Avatar" class="avatar">
     <%= form_for(:session, url: login_path) do |form|%>
-        <div class="imgcontainer">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUgG3o6e75uadcdwzpwJ3VAXXPiKZdWnN8gBavwd5j1smegtNzIQ" alt="Avatar" class="avatar">
-        </div>
         <div>
             <%= form.label :email %>
             <%= form.text_field :email, placeholder: "Enter Username", required: true %>
@@ -23,6 +24,6 @@
         </div>
         <button type="submit" class="loginbtn">Log In!</button><br><br>
     <% end %>
-    <a href="/users/new">Create New User</a>
+    </div>
 </body>
 </html>

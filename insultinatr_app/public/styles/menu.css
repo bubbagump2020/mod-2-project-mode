@@ -3,6 +3,10 @@ body {
     font-family: 'Gloria Hallelujah', cursive;
     overflow: auto;
   }
+
+  input {
+    font-family: 'Gloria Hallelujah', cursive;               
+}
   
   h1 {
     color: white;
@@ -34,22 +38,13 @@ body {
     background-color: gray;
   }
   * Full-width input fields */
-input[type=email], input[type=password] {
-  width: 75%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-  overflow: auto;
-  resize: vertical;
-}
 
-input[type=email]:focus, input[type=password]:focus {
+
+/* input[type=email]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
   overflow: auto;
-}
+} */
 
 hr {
   border: 1px solid #f1f1f1;
@@ -58,7 +53,7 @@ hr {
 
 /* Set a style for all buttons */
 button {
-  background-color: lightslategray;
+  /* background-color: lightslategray;
   color: white;
   padding: 14px 20px;
   border: none;
@@ -70,7 +65,18 @@ button {
   text-align: center;
   display: block;
   max-width: 300px;
-  margin: auto;
+  margin: auto; */
+  background-color: lightslategray;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 
 button:hover {
@@ -92,17 +98,13 @@ button:hover {
   cursor: pointer;
 }
 
-/* Add padding to container elements */
 .container {
-  padding: 16px;
-  position: absolute;
-  left: 0;
-  top: 50%;
   width: 100%;
   text-align: center;
   overflow: auto;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
 }
 
 /* Clear floats */
@@ -111,32 +113,47 @@ button:hover {
   clear: both;
   display: table;
 }
+
 ul {
-    padding: 20px;
+    padding: 0;
     background: darkslategray;
     font-family: 'Gloria Hallelujah', cursive;
-    border-radius: 15px 50px 30px 5px;
-    width: 75%;
-    position: relative;
-    left: 30px;
+    /* border-radius: 15px 50px 30px 5px; */
+    width: 100%;
+    position: fixed;
+    /* left: 30px; */
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    bottom: 0;
 }
-h2 {
-    position: relative;
-    left: 30px;
-    clear: left;
+li {
+    /* float: left; */
+    display: inline;
+}
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 ul li {
+    display:inline;
     margin: 5px;
     background: lightslategray;
     overflow: auto;
     font-family: 'Gloria Hallelujah', cursive;
     width: 75%;
 }
-div {
-    font-family: 'Gloria Hallelujah', cursive;
-    margin-left: auto;
-    margin-right: auto;
+
+
+h2 {
+    position: relative;
+    left: 30px;
+    clear: left;
 }
+
+
 .header, .footer {
     background-color: grey;
     color: white;
@@ -148,19 +165,101 @@ div {
   html {
     font-family: 'Gloria Hallelujah', cursive;
   }
-  .topnav {
+  
+  label {
+    width: 50%;
+    resize: vertical;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input[type=submit] {
+    background-color: lightslategray;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  input[type=email], select {
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input[type=text], select {
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  div {
+    font-family: 'Gloria Hallelujah', cursive;
+    margin: 30px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+img {
+    opacity: 0.95;
+    border-radius: 180px;
+    width: 25%;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc;
+  }
+
+  input[type=password] {
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+.navbar {
     overflow: hidden;
-    /* background-color: #333; */
+    background: darkslategray;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: none;
+    }
+      
+.navbar a {
     float: left;
-    position: relative;
-    left: 12px;
-  }
-  .topnav a {
-      float: left;
-      display: block;
-      text-align: center;
-      padding: 14px 16px;
-      border-radius: 50px 15px;
-      /* position: relative;
-      left: 50px; */
-  }
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: none;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 0px;
+    margin: none;
+    }
+
+    
