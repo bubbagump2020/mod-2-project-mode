@@ -1,5 +1,4 @@
 module SessionsHelper
-    # logs in given user
     def log_in(user)
         session[:id] = user.id
     end
@@ -13,7 +12,7 @@ module SessionsHelper
     end
 
     def log_out
-        session.delete(:user_id)
+        session.destroy
         @current_user = nil
     end
 end

@@ -1,5 +1,6 @@
 class NamesController < ApplicationController
     def show
+        @insult = Insult.all.sample
         @names = Name.all
         @user = session[:id]
     end

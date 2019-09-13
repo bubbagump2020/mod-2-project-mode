@@ -1,9 +1,4 @@
 class InsultsController < ActionController::Base
-
-    def index
-        @insults = Insult.all 
-    end
-    
     def show
         @insults = Insult.all
         @user = session[:id]

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" type="text/css" href="../../styles/menu.css">
-<title>The Insultinatr!</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Insultinatr!</title>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="../../styles/menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <div class="header">
@@ -22,7 +22,7 @@
             <%= form.label :password %>
             <%= form.password_field :password, placeholder: "Enter Password", required: true %>
         </div>
-        <%= form.submit("Login") %><br><br>
+        <button type="submit" class="loginbtn">Log In!</button><br><br>
     <% end %>
     </div>
 </body>
