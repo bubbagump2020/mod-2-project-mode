@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     skip_before_action(:verify_authenticity_token)
     include SessionsHelper
-    after_action :track_action
+    # after_action :track_action
 
     protected
 
@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     end
     # before_action(:check_for_authentication)
     # skip_before_action :verify_authenticity_token
-    before_action(:check_for_authentication)
+    # before_action(:check_for_authentication)
 
     # def check_for_authentication
     #     if(current_user == nil)

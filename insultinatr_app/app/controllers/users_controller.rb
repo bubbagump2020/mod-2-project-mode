@@ -15,7 +15,7 @@ class UsersController < ActionController::Base
         @user = User.create(user_params)
         if @user.save
             flash[:success] = "Welcome!"
-            redirect_to @user.id
+            redirect_to("/users/#{@user.id}")
         else
             render 'new'
         end
@@ -24,7 +24,7 @@ class UsersController < ActionController::Base
 
     private
         def user_params
-            params.require(:user).permit( :email, :password, :password_confirmation, :visit_id)
+            params.require(:user).permit( :email, :password, :password_confirmation)
         end
 
 end
