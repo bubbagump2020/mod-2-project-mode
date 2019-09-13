@@ -3,8 +3,8 @@ class UsersController < ActionController::Base
         @insults = Insult.all
         @names = Name.all
         @user_id = session[:id]
-        @user = User.find_by({id:params[:id]})
         @users = User.all 
+        @insult = @insults.sample
     end
 
     def new
@@ -19,12 +19,10 @@ class UsersController < ActionController::Base
         else
             render 'new'
         end
-
     end
 
     private
         def user_params
             params.require(:user).permit( :email, :password, :password_confirmation)
         end
-
 end
